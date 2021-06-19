@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if colleagues %}
+    <div><h2 class="mb-4">Менің әріптестерім</h2></div>
+
+    {% for name, info in colleagues.items() %}
+      <div>{{name|capitalize}}: {{info.department}}, {{info.age}}</div>
+    {% endfor %}
+  {% else %}
+    {{name|capitalize}}: {{info.department}}, {{info.age}}
+  {% endif %}
+{% endblock %}
